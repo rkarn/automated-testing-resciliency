@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: recommendationservice
+spec:
+  hosts:
+  - recommendationservice.default.svc.cluster.local
+  http:
+  - fault:
+      abort:
+        httpStatus: 500
+        percent: 100
+    route:
+    - destination:
+        host: recommendationservice
+  - route:
+    - destination:
+        host: recommendationservice
