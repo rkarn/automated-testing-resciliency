@@ -31,3 +31,12 @@ Run this command for load testing:
     Enter the number of virtual user (e.g. 100) and the swarming rate (e.g.10).  
 
 Step 4 : Resiliency
+
+Open the Kubernetes dashboard through URL:
+   
+    kubectl proxy
+    
+    Open the URL:   http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy 
+    
+    1. Scaling: Go to Deployment tab and select a deployment to scale. Click on the right hand side menu and click on scale. Set the number you want replicas and click OK.
+    2. Failover: 
