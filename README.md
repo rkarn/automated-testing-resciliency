@@ -1,5 +1,7 @@
+Step 1: Setup the Kubernetes cluster and deploy Hipster application as mentioned in "Hipster-Application-Setup" file.
 
-Fault Injection:
+
+Step 2: Fault Injection
 
 Go to fault injection folder. Then inject fault one by one by feeding each yaml file in this command
     
