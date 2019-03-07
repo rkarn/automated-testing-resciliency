@@ -30,4 +30,4 @@ Run this command for load testing:
     
     Enter the number of virtual user (e.g. 100) and the swarming rate (e.g.10).  
 
-Step 4 : Resciliency
+Step 4 : Resiliency
