@@ -43,3 +43,42 @@ Open the Kubernetes dashboard through URL:
     kubectl create -f <YAML-file-name>
     3. CircuitBreaker: Run the below command to create circuit breaker. Yaml file is given.
     kubectl create -f circuit-breaker.yaml
+
+
+Optional:
+
+1. Use cadvisor monitoring tool to trace the CPU, memory and network profile of each container:
+    
+        cadvisor monitoring:
+         docker run \
+          --volume=/:/rootfs:ro \
+          --volume=/var/run:/var/run:ro \
+          --volume=/sys:/sys:ro \
+          --volume=/var/lib/docker/:/var/lib/docker:ro \
+          --volume=/dev/disk/:/dev/disk:ro \
+          --publish=8080:8080 \
+          --detach=true \
+          --name=cadvisor \
+          google/cadvisor:latest
+          
+          Then open the URL http://localhost:8080 
+          
+ 2. Fault can also be injected by defining network policy given in kubernetes: 
+ 
+        https://kubernetes.io/docs/concepts/services-networking/network-policies/#the-networkpolicy-resource
+ 
+ 3. Circuit breaker explained:
+        
+        https://github.com/IBM/resilient-java-microservices-with-istio
+        https://techblog.constantcontact.com/software-development/circuit-breakers-and-microservices/
+        https://redthunder.blog/2018/07/30/circuit-breaker-in-service-mesh-istio-envoy/
+  
+ 4. Few useful links:
+        
+        Gremlin: https://www.computer.org/csdl/proceedings/icdcs/2016/1483/00/1483a057-abs.html
+        sourcecode: https://github.com/ResilienceTesting/gremlinsdk-python
+                    https://github.com/ResilienceTesting/gremlinproxy
+                    
+5. Tutorial on microservice:
+
+        https://www.youtube.com/watch?v=1xo-0gCVhTU
