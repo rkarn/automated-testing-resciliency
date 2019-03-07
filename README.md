@@ -14,3 +14,20 @@ Confirm that fault has been injected successfully through this command:
 To delete the injected fault, run this command:
 
     kubectl delete -f <yaml-file-name>
+Step 3: Locust Integration and Load testing
+
+Install Locust from https://docs.locust.io/en/stable/installation.html
+
+Quick Start guide is available at https://docs.locust.io/en/stable/quickstart.html 
+
+Run this command for load testing:
+
+    locust -f locustfile-complete.py  --host=http://localhost:31380 --print-stats
+
+    http://localhost:31380 is the frontend-url. Filename "locustfile-complete.py" is provided.
+    
+    Open the Locust GUI from : http://localhost:8089/ 
+    
+    Enter the number of virtual user (e.g. 100) and the swarming rate (e.g.10).  
+
+Step 4 : Resciliency
