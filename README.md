@@ -39,4 +39,7 @@ Open the Kubernetes dashboard through URL:
     Open the URL:   http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy 
     
     1. Scaling: Go to Deployment tab and select a deployment to scale. Click on the right hand side menu and click on scale. Set the number you want replicas and click OK.
-    2. Failover: 
+    2. Failover: An example of failover of network between checkout and payment service is given in "Resiliency folder". Run the command on both  service one by one. 
+    kubectl create -f <YAML-file-name>
+    3. CircuitBreaker: Run the below command to create circuit breaker. Yaml file is given.
+    kubectl create -f circuit-breaker.yaml
