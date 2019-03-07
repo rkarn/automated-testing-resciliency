@@ -1,3 +1,5 @@
+#This code is taken from https://github.com/GoogleCloudPlatform/microservices-demo
+
 import random
 from locust import HttpLocust, TaskSet
 
