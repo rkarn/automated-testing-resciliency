@@ -2,7 +2,7 @@
 
 This repsitory contains the source code to reproduce the expremental outcomes of paper:
 
-`Karn, Rupesh Raj, Rammi Das, Dibakar Raj Pant, Jukka Heikkonen, and Rajeev Kanth. "Automated testing and resilience of Microservice’s network-link using istio service mesh." In 2022 31st Conference of Open Innovations Association (FRUCT), pp. 79-88. IEEE, 2022.`.
+`Karn, Rupesh Raj, Rammi Das, Dibakar Raj Pant, Jukka Heikkonen, and Rajeev Kanth. "Automated testing and resilience of Microservice’s network-link using istio service mesh." In 2022 31st Conference of Open Innovations Association (FRUCT), pp. 79-88. IEEE, 2022`.
 
 Step 1: Setup the Kubernetes cluster and deploy Hipster application as mentioned in "Hipster-Application-Setup" file. The hipster benachmark is available at `https://github.com/lightstep/hipster-shop`.
 
